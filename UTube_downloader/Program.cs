@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Google.Apis.Services;
+﻿using Google.Apis.Services;
 using Google.Apis.YouTube.v3;
 using VideoLibrary;
 
@@ -13,7 +9,7 @@ namespace YTdownloader
         static async Task Main(string[] args)
         {
             int downloadType;
-            string playListID, outputPath;
+            string ? playListID, outputPath;
             string NextPageToken = string.Empty;
             string[] textValue;
 
@@ -71,14 +67,21 @@ namespace YTdownloader
                     {
                         var videoInfos = await youtube.GetAllVideosAsync(textValue[k]);
                         var downloadInfo = videoInfos.Where(i => i.AudioFormat == AudioFormat.Aac && i.AudioBitrate == 128).FirstOrDefault();
-                        File.WriteAllBytes(outputPath + downloadInfo.FullName + ".mp3", downloadInfo.GetBytes());
+                        if (downloadInfo != null)
+                        {
+                            File.WriteAllBytes(outputPath + downloadInfo.FullName + ".mp3", downloadInfo.GetBytes());
+                        }
                     }
                     else
                     {
                         var videoInfos = await youtube.GetAllVideosAsync(textValue[k]);
                         var downloadInfo = videoInfos.Where(i => i.Format == VideoFormat.Mp4 && i.Resolution == 720).FirstOrDefault();
-                        File.WriteAllBytes(outputPath + downloadInfo.FullName + ".mp4", downloadInfo.GetBytes());
-                        // File.WriteAllBytes(@"G:\" + video.FullName, video.GetBytes());
+
+                        if(downloadInfo != null)
+                        {
+                            File.WriteAllBytes(outputPath + downloadInfo.FullName + ".mp4", downloadInfo.GetBytes());
+                            // File.WriteAllBytes(@"G:\" + video.FullName, video.GetBytes());
+                        }
                     }
                     Console.WriteLine("다운로드 완료" + "[" + (k + 1) + "]/[" + textValue.Length + "]");
                 }
