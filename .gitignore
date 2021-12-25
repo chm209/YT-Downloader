@@ -1,3 +1,5 @@
 .vs
 UTube_downloader/bin
 UTube_downloader/obj
+UTube_downloader_GUI/bin
+UTube_downloader_GUI/obj
