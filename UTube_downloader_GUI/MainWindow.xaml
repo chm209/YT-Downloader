@@ -11,7 +11,22 @@
             <Button x:Name="close_button" Style="{StaticResource close_button}" Content="&#xE106;" Click="close_button_Click" Margin="464,1,1,1"/>
             <Button x:Name="minimize_button" Style="{StaticResource minimize_button}" Content="ㅡ" Click="minimize_button_Click" Margin="424,1,41,1" Width="Auto" Height="Auto"/>
             <Button x:Name="pinned_button" Style="{StaticResource pinned_button}" Content="&#xE718;" Click="pinned_button_Click" Margin="384,1,81,1" FontFamily="Segoe MDL2 Assets" FontSize="14" Width="Auto" Height="Auto"/>
-            <Label Content="UTube downloader" Style="{StaticResource statusbar_label}" Height="36" Width="120"/>
+            <Label Content="UTube downloader" Style="{StaticResource statusbar_label}" Height="Auto" Width="120"/>
+        </Grid>
+        <Grid Margin="0,36,0,0">
+            <Label Content="EX: D://Folder/" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <Label Content="저장위치: " HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <TextBox HorizontalAlignment="Left" Margin="94,38,0,0" TextWrapping="Wrap" Text="D://Folder/" VerticalAlignment="Top" Width="396" Height="28" FontFamily="NanumSquareRound ExtraBold" FontSize="14"/>
+            <Label Content="EX: PLqEUpE8Xrq2Ig" HorizontalAlignment="Left" Margin="10,137,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <Label Content="플레이리스트 url중 list= 이후 부분을 입력하십시오" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <Label Content="https://www.youtube.com/playlist?list='PLqEUpE8Xrq2Ig'" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <Label Content="플레이리스트는 모두공개 or 일부공개 상태여야 합니다." HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <Label Content="플레이리스트 ID: " HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <TextBox HorizontalAlignment="Left" Margin="143,203,0,0" TextWrapping="Wrap" Text="PLqEUpE8Xrq2IgXHzwuMVRhJfJnBFS1w0a" VerticalAlignment="Top" Width="347" Height="28" FontFamily="NanumSquareRound ExtraBold" FontSize="14"/>
+            <Button Content="다운로드" Margin="397,317,10,10"/>
+            <Label Content="다운로드 상황" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <Label Content="N개중" HorizontalAlignment="Left" Margin="116,326,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
+            <Label Content="N개 다운로드 완료" HorizontalAlignment="Left" Margin="172,326,0,0" VerticalAlignment="Top" FontFamily="NanumSquare ExtraBold" FontSize="16"/>
         </Grid>
         <Border BorderBrush="#cccedb" BorderThickness="1"/>
     </Grid>
