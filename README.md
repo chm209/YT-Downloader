@@ -74,6 +74,15 @@ if (downloadType == 1)
 6. https://www.niteshluharuka.com/list-videos-from-a-channel-using-youtube-api-v3-in-c/
 
 ---
+
+## GUI 버전
+
+최대한 단순하게 구현할 예정
+
+![gui](./image/readme.png)
+
+---
+
 ## 라이센스
 
 ***GNU General Public License v3.0***
