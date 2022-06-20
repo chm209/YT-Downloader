@@ -12,13 +12,12 @@ namespace YTdownloader
             string ? playListID, outputPath;
             string NextPageToken = string.Empty;
             string[] textValue;
-
+            
             // ↓ URI 추출
             // 유튜브 API 사용
             var youtube = YouTube.Default;
-            YouTubeService youtubeService = new YouTubeService(new BaseClientService.Initializer() { ApiKey = "API 키" });
+            YouTubeService youtubeService = new YouTubeService(new BaseClientService.Initializer() { ApiKey = "API 키 입력" });
 
-            Console.WriteLine("EX) D:\\save\\");ddd
             Console.Write("파일 저장 위치: ");
             outputPath = Console.ReadLine();
             Console.Write("재생목록 ID 입력: ");
@@ -80,7 +79,6 @@ namespace YTdownloader
                         if(downloadInfo != null)
                         {
                             File.WriteAllBytes(outputPath + downloadInfo.FullName + ".mp4", downloadInfo.GetBytes());
-                            // File.WriteAllBytes(@"G:\" + video.FullName, video.GetBytes());
                         }
                     }
                     Console.WriteLine("다운로드 완료" + "[" + (k + 1) + "]/[" + textValue.Length + "]");
