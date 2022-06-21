@@ -18,7 +18,7 @@ namespace YTdownloader
             var youtube = YouTube.Default;
             YouTubeService youtubeService = new YouTubeService(new BaseClientService.Initializer() { ApiKey = "API 키 입력" });
 
-            Console.WriteLine("EX) D:\\save\\");ddd
+            Console.WriteLine("EX) D:\\save\\");
             Console.Write("파일 저장 위치: ");
             outputPath = Console.ReadLine();
             Console.Write("재생목록 ID 입력: ");
