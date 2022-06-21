@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.55.0.2449" />
-    <PackageReference Include="VideoLibrary" Version="3.1.4" />
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.57.0.2721" />
+    <PackageReference Include="VideoLibrary" Version="3.1.9" />
   </ItemGroup>
 
 </Project>
