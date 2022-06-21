@@ -1,21 +1,23 @@
 ## UTube downloader
+
 공개, 일부공개 플레이 리스트 항목을 다운로드 할 수 있습니다.
 
-``` Youtube api를 공부하는겸 만들어봤습니다. ```
+`Youtube api를 공부하는겸 만들어봤습니다.`
 
 ---
 
 ##### 2021.12.25 수정사항
+
 1. .NET 6.0으로 변경
 2. 모든 워닝 해결 (CS8600, CS8602)
 
-``` CS8600 ```
+`CS8600`
 
-Severity	Code	Description	Project	File	Line	Suppression State
+Severity Code Description Project File Line Suppression State
 
-Warning	CS8600	Converting null literal or possible null value to non-nullable type.
+Warning CS8600 Converting null literal or possible null value to non-nullable type.
 
-``` c#
+```c#
 변경전
 string playListID, outputPath;
 변경후
@@ -26,14 +28,13 @@ string ? playListID, outputPath;
 
 (참고) https://developstudy.tistory.com/69
 
-``` CS8602 ```
+`CS8602`
 
-Severity	Code	Description	Project	File	Line	Suppression State
+Severity Code Description Project File Line Suppression State
 
-Warning	CS8602	Dereference of a possibly null reference.
+Warning CS8602 Dereference of a possibly null reference.
 
-
-``` c#
+```c#
 변경전
 if (downloadType == 1)
 {
@@ -58,14 +59,23 @@ if (downloadType == 1)
 
 ---
 
+##### 2022.06.21 수정사항
+
+1. GUI 개발 중단
+
+---
+
 #### 사용한 Nuget Package
+
 1. Google.Apis.YouTube.v3
 2. VideoLibrary
 
 #### Google Console Youtube API 발급
+
 1. https://console.cloud.google.com/
 
 #### 참고한 사이트
+
 1. https://developers.google.com/youtube/v3/code_samples/dotnet?hl=ko#search_by_keyword
 2. https://www.csharpstudy.com/Practical/Prac-youtube-api.aspx
 3. https://imyeonn.github.io/blog/web/39/
@@ -75,16 +85,8 @@ if (downloadType == 1)
 
 ---
 
-## GUI 버전
-
-최대한 단순하게 구현할 예정
-
-![gui](./image/readme.png)
-
----
-
 ## 라이센스
 
-***GNU General Public License v3.0***
+**_GNU General Public License v3.0_**
 
-***Copyright 2021. chm209 all right reserved***
+**_Copyright 2021-2022. chm209 all right reserved_**
